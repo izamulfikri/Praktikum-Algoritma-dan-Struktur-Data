@@ -94,12 +94,25 @@ public class pemilihan {
 ```
 #### Hasil Run
 
-##### Untuk yang lulus
-
+##### 80-100
 <img src="img/3.png">
 
-##### Untuk yang tidak
+##### 73-80
+<img src="img/a.png">
 
+##### 65-73
+<img src="img/b.png">
+
+##### 60-65
+<img src="img/c.png">
+
+##### 50-60
+<img src="img/d.png">
+
+##### 39-59
+<img src="img/e.png">
+
+##### <39
 <img src="img/4.png">
 
 ##### Untuk yang tidak sesuai
@@ -344,7 +357,9 @@ public class fungsi {
 
 <img src="img/11.png">
 
-### __Tugas__
+<hr>
+
+### __Tugas 1__
 
 1.	Sebuah jasa cuci pakaian Smile Laundry memiliki aturan biaya seperti berikut ini:
 - Tarif untuk setiap 1kg pakaian adalah Rp. 4.500, –
@@ -399,7 +414,134 @@ public class tugas1 {
 
 #### Hasil Run
 
+<img src="img/18.png">
+
+### __Tugas 2__
+
+2.	Buat program untuk menghitung rumus kecepatan, jarak, dan waktu Berikut adalah persamaan untuk menghitung rumus tersebut :
+
 <img src="img/12.png">
+
+Program yang dibuat memiliki fungsi sebagai berikut: 
+-	Menu (Untuk memilih rumus yang akan dihitung (kecepatan/jarak/waktu) 
+
+-	Menghitung hasil perhitungan Kecepatan 
+
+-	Menghitung hasil perhitungan Jarak 
+
+-	Menghitung hasil perhitungan Waktu Panggil fungsi-fungsi tersebut pada fungsi main!
+
+#### Kode Program
+``` java
+//Nama : Mohammad Izamul Fikri Fahmi
+//Kelas : 1F
+//Absen : 17
+//NIM : 2141720171
+import java.util.Scanner;
+public class tugas2 {
+    /* keterangan
+    v = kecepatan
+    s = jarak
+    t = waktu */
+    static Scanner sc = new Scanner(System.in);
+
+    public static void kecepatan(){
+        double v,s,t;
+        System.out.println("\n*-- Menghitung Kecepatan --*");
+        System.out.println("===================================================");
+        System.out.print("Masukkan jarak (satuan km)  : ");
+        s = sc.nextInt();
+        System.out.print("Masukkan Waktu (satuan jam) : ");
+        t = sc.nextInt();
+        v = s / t;
+        System.out.printf("Kecepatan                   : %.1fkm/jam\n\n",v);
+        jeda();
+    }
+    public static void jarak(){
+        double v,s,t;
+        System.out.println("\n*-- Menghitung Jarak --*");
+        System.out.println("===================================================");
+        System.out.print("Masukkan Kecepatan (satuan km/jam)  : ");
+        v = sc.nextInt();
+        System.out.print("Masukkan Waktu     (satuan jam)     : ");
+        t = sc.nextInt();
+        s = v * t;
+        System.out.printf("Jarak                               : %.1fkm\n\n",s);
+        jeda();
+        
+    }
+    public static void waktu(){
+        double v,s,t;
+        System.out.println("\n*-- Menghitung waktu --*");
+        System.out.println("===================================================");
+        System.out.print("Masukkan jarak     (satuan km)     : ");
+        s = sc.nextInt();
+        System.out.print("Masukkan Kecepatan (satuan km/jam) : ");
+        v = sc.nextInt();
+        t = s / v;
+        System.out.printf("Waktu                              : %.2fjam\n\n",t);
+        jeda();
+    }
+    //Fungsi input untuk lanjut
+    public static void jeda() {
+	Scanner enter = new Scanner(System.in);
+    System.out.print("\n\nKetik Enter Untuk Lanjut...");
+	enter.nextLine();
+	System.out.println();
+    }
+    
+    public static void main(String[] args) {
+        
+    int opsi;
+    do{
+        System.out.println("*-- PROGRAM MENGHITUNG KECEPATAN JARAK & WAKTU --*");
+        System.out.println("===================================================");
+        System.out.println("1. Menghitung kecepatan");
+        System.out.println("2. Menghitung Jarak");
+        System.out.println("3. Menghitung Waktu");
+        System.out.println("4. Keluar");
+        System.out.println("___________________________________________________");
+        System.out.print("Masukkan Opsi : ");
+        opsi = sc.nextInt();
+        switch(opsi){
+            case 1:
+            kecepatan();
+            break;
+            case 2:
+            jarak();
+            break;
+            case 3:
+            waktu();
+            break;
+            case 4:
+            System.out.println("\nTerima kasih telah menggunakan program ini ^_^\n");
+            break;
+            default:
+            System.out.println("\nopsi yang anda masukkan salah\n");
+        }
+    }while(opsi!=4);
+    }
+}
+```
+
+#### Hasil Run
+##### kecepataan
+<img src="img/13.png">
+
+##### jarak
+<img src="img/14.png">
+
+##### waktu
+<img src="img/15.png">
+
+##### keluar program
+<img src="img/16.png">
+
+##### salah opsi
+<img src="img/17.png">
+
+
+
 
 
 
