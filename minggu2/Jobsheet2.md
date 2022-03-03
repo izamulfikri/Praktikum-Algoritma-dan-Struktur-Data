@@ -489,3 +489,8 @@ public class PacMan {
 
 ```
 ##### Hasil Run
+<img src="img/pm1.png">
+
+<img src="img/pm2.png">
+
+<img src="img/pm3.png">
