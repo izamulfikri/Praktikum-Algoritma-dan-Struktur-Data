@@ -1,5 +1,10 @@
-import java.util.Scanner;
+/*
+@author Mohammad Izamul FIkri Fahmi
+*/
 
+
+
+import java.util.Scanner;
 public class GameMain {
 
     public static void main(String[] args) {
@@ -63,6 +68,6 @@ public class GameMain {
 
         
         
-        
+    sc.close();
     }
 }
