@@ -1,3 +1,6 @@
+/*
+@author Mohammad Izamul FIkri Fahmi
+*/
 public class Kuman {
     int powerKuman;
     
@@ -6,7 +9,6 @@ public class Kuman {
     }
     
     void makanPacman(int p){
-       
         powerKuman += p;
         System.out.println("\nKekuatan kuman bertambah sebesar: "+powerKuman );
         

@@ -1,3 +1,6 @@
+/*
+@author Mohammad Izamul FIkri Fahmi
+*/
 public class Pacman {
     int pil;
     
