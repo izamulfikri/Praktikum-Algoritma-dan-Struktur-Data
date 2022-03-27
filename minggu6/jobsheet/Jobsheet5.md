@@ -738,3 +738,147 @@ buatlah proses sorting data untuk harga tiket menggunakan algoritma bubble sort 
 selection sort. 
 
 <img src="img/551.png">
+
+##### Kode program Tiket.java
+```java
+package jobsheet;
+
+public class Tiket {
+    String maskapai, tujuan, asal;
+    int harga;
+
+    Tiket(String m, String a, String t,int h){
+        maskapai = m;
+        asal = a;
+        tujuan = t;
+        harga = h;
+    }
+
+    void tampil(){
+        System.out.println("==============================");
+        System.out.println("|   Izamul Fikri TiketStore  |");
+        System.out.println("==============================");
+        System.out.println("Maskapai     : " + maskapai);
+        System.out.println("Asal         : " + asal);
+        System.out.println("Tujuan       : " + tujuan);
+        System.out.println("Harga        : Rp." + harga+",-");
+    }
+}
+```
+
+##### Kode program DaftarTiket.java
+```java
+package jobsheet;
+
+public class DaftarTiket {
+    
+
+    Tiket tk[] = new Tiket[6];
+    int tik;
+
+    // method tambah
+    void tambah(Tiket mskp){
+        if(tik<tk.length){
+            tk[tik]=mskp;
+            tik++;
+        } else{
+            System.out.println("data sudah penuh!!");
+        }
+    }
+
+    //method tampil
+    void tampil(){
+        for (Tiket mskp : tk){
+            mskp.tampil();
+        }
+    }
+
+    //method bubblesort
+    void bubbleSort(){
+        for (int i = 0; i < tk.length; i++){
+            for (int j = 1; j < tk.length; j++){
+                if (tk[j].harga < tk[j-1].harga){
+                    //proses swap
+                    Tiket tmp = tk[j];
+                    tk[j] = tk[j-1];
+                    tk[j-1] = tmp;
+                }
+            }
+        }
+    }
+
+    //method selectionsort
+    void selecionSort(){
+        for (int i = 0; i < tk.length; i++){
+        int idxMin = i;
+
+        for (int j = i + 1; j < tk.length; j++) {
+            if (tk[j].harga < tk[idxMin].harga) {
+                idxMin = j;
+            }
+
+            // swap
+            Tiket zam = tk[idxMin];
+            tk[idxMin] = tk[i];
+            tk[i] = zam;
+        }       
+    }
+    }
+}
+```
+
+##### Kode program TiketMain.java
+```java
+package jobsheet;
+import java.util.Scanner;
+
+public class TiketMain {
+    
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        DaftarTiket list = new DaftarTiket();
+
+        // Data ini hanya fiktif, keperluan rancangan saja
+        Tiket t1 = new Tiket("Zam Air", "Banyuwangi", "Malang", 1200000);
+        Tiket t2 = new Tiket("Fikri Air", "Bali", "Surabaya", 1900000);
+        Tiket t3 = new Tiket("Angel Wings", "Banyuwangi", "Medan", 2500000);
+        Tiket t4 = new Tiket("Berkah Udara", "Jakarta", "Mekah", 10000000);
+        Tiket t5 = new Tiket("Izamul AirAsia", "Bali", "Tokyo", 5000000);
+        Tiket t6 = new Tiket("Garuda jayalangit", "Nusantara", "Moskow", 7000000);
+
+        list.tambah(t1);
+        list.tambah(t2);
+        list.tambah(t3);
+        list.tambah(t4);
+        list.tambah(t5);
+        list.tambah(t6);
+        System.out.println("------------------------");
+        System.out.println("| Data Sebelum Sorting |");
+        System.out.println("------------------------");
+        list.tampil();
+        System.out.println();
+
+
+        System.out.println("> Harga Termurah ke Termahal <");
+        System.out.println("---------------------------------------------------");
+        System.out.println("| Data Penerbangan Sorting Asc dengan Bubble sort |");
+        System.out.println("---------------------------------------------------");
+        list.bubbleSort();;
+        list.tampil();
+
+
+        System.out.println("> Harga Termurah ke Termahal <");
+        System.out.println("---------------------------------------------------");
+        System.out.println("| Data Penerbangan Sorting Asc dengan Selection sort |");
+        System.out.println("---------------------------------------------------");
+        list.selecionSort();
+        list.tampil();
+    }
+}
+```
+
+##### Hasil Compile Program
+<img src="img/1.png">
+<img src="img/2.png">
+<img src="img/3.png">
+<img src="img/4.png">
