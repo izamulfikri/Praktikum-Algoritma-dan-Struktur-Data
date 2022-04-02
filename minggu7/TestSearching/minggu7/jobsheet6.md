@@ -1136,7 +1136,9 @@ dilakukan pada nama yang sama!
 
 jawab :
 
-Hanya akan menampilkan indeks yang pertama kali ditemukan
+Hanya akan menampilkan indeks yang pertama kali ditemukan,
+
+harus ada
 
 ##### hasil pengujian
 
@@ -1236,3 +1238,4 @@ public class Latihan3Main {
 ```
 
 ##### Hasil Run
+<img src="img/lat3.png">
