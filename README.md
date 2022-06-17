@@ -1,10 +1,18 @@
-# Praktikum-Algoritma-dan-Struktur-Data
-This repo is used for algorithm and data structure practicum assignments
+# **Assalamualaikum Wr Wb** 
+# Praktikum-Algoritma-dan-Struktur-Data-
 
-Name    : Mohammad Izamul Fikri Fahmi
+## **Repository ini berisi tentang Laporan dan pengumpulan Jobsheet Praktikum Algoritma dan struktur data**
 
-Absent  : 17
+- Nama    : Mohammad Izamul Fikri Fahmi
+- Kelas   : 1F
+- Prodi   : D-IV Teknik Informatika
+- Jurusan : Teknologi Informasi
 
-Class   : 1F
+## Politeknik Negri Malang
 
-SN      : 2141720171
+Tools yang saya gunakan
+- Jdk. 8.0
+- Visual Studio Code
+
+# Terima Kasih
+--------------
